@@ -27,7 +27,7 @@
                                     <h3 class="card-title logo-font">{{ programme.name }}</h3>
                                     <p class="card-text">{{ programme.description }}</p>
                                     <p class="card-subtitle">€{{ programme.price }}</p>
-                                    <a href="#" class="card-link">More info</a>
+                                    <a href="{% url 'programme_detail' programme.id %}" class="card-link">More info</a>
                                 </div>
                             </div>
                             
