@@ -57,6 +57,17 @@ body {
     border: 1px solid black !important;
 }
 
+.overlay {
+    height: 70%;
+    width: 75%;
+    top: 20%;
+    left: 12.5%;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

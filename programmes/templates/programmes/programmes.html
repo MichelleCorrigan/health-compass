@@ -10,11 +10,31 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col">
-            {{ programmes }}
+    <!-- <div class="overlay"> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center mt-3">
+                    <h2 class="logo-font">Programmes</h2>
+                    <hr class="w-50 mb-1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="programme-container">
+                    <div class="row">
+                        {% for programme in programmes %}
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h3 class="card-title logo-font">{{ programme.name }}</h3>
+                                    <p class="card-text">{{ programme.description }}</p>
+                                    <p class="card-subtitle">€{{ programme.price }}</p>
+                                    <a href="#" class="card-link">More info</a>
+                                </div>
+                            </div>
+                            
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
