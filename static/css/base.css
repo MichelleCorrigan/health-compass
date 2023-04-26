@@ -28,6 +28,11 @@ body {
     width: fit-content;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to overide link colors for <a> elements */
+}
+
 /* .shop-now-button {
     background: black;
     color: white;
