@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-!dpg85)q9ar2z!9-b-!hrk2zecl-w!t=2e^!zfg!7o-4n^@*fx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['health-compass.heroku.com', 'localhost']
+ALLOWED_HOSTS = ['health-compass.herokuapp.com', 'localhost']
 
 
 # Application definition
