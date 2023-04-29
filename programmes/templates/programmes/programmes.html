@@ -10,10 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <!-- <div class="overlay"> -->
+    <div class="overlay">
         <div class="container-fluid">
             <div class="row">
-                <div class="col text-center mt-3">
+                <div class="col">
                     <h2 class="logo-font">Programmes</h2>
                     <hr class="w-50 mb-1">
                 </div>
@@ -30,7 +30,6 @@
                                     <a href="{% url 'programme_detail' programme.id %}" class="card-link">More info</a>
                                 </div>
                             </div>
-                            
                         {% endfor %}
                     </div>
                 </div>
