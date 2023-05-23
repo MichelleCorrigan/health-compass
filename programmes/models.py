@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Programme(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
