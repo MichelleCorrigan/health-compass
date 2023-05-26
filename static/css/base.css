@@ -77,6 +77,10 @@ p {
     z-index: -1;
 }
 
+.remove-item {
+    cursor: pointer;
+}
+
 
 /* -------------------------------- Media Queries */
 
