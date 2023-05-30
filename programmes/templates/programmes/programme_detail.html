@@ -30,14 +30,29 @@
                                     <p class="mt-3"><strong>Quantity:</strong></p>
                                     <div class="form-group w-50">
                                         <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-black rounded-0"
+                                                    data-item_id="{{ programme.id }}" id="decrement-qty_{{ programme.id}}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
                                             <input class="form-control qty_input" type="number"
-                                                name="quantity" value="1" min="1" max="1"
+                                                name="quantity" value="1" min="1" max="3"
                                                 data-item_id="{{ programme.id }}"
                                                 id="id_qty_{{ programme.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-black rounded-0"
+                                                    data-item_id="{{ programme.id }}" id="increment-qty_{{ programme.id}}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-    
                                 <div class="col-12">
                                     <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-2" value="Add to Bag">
                                     <a href="{% url 'programmes' %}" class="btn btn-outline-black rounded-0 mt-2">
@@ -46,7 +61,6 @@
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
@@ -58,3 +72,22 @@
     </div>
 {% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
+{% include 'programmes/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id')
+        var url = `/bag/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+{% endblock %}
