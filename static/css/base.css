@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/background.5_image.webp') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: 100%;
     color: #023a1e;
     font-family: 'Lato';
 }
@@ -105,5 +105,16 @@ p {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
