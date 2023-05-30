@@ -69,9 +69,9 @@ p {
 
 .overlay {
     height: 100%;
-    width: 75%;
+    width: 90%;
     top: 20%;
-    left: 12.5%;
+    left: 5%;
     position: fixed;
     background: white;
     z-index: -1;
@@ -81,6 +81,10 @@ p {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+#sign_in {
+    margin-top: 15%;
 }
 
 
@@ -116,5 +120,20 @@ p {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    /* full overlay on mobile view */
+    .overlay {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: white;
+        z-index: -1;
+    }
+
+    #sign_in {
+        margin-top: 25%;
     }
 }
