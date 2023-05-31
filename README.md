@@ -51,7 +51,7 @@ In the root directory of your project, create a file called "Procfile" and add  
     
 In settings.py 
 1. Add ['app_name.heroku.com', 'localhost'] to  `ALLOWED_HOSTS`
-2. Add the key value of: `DISABLE_COLLCETSTATIC`  and set it to 1. When you have  staticfiles to push then remove this variable
+2. Add the key value of: `DISABLE_COLLECTSTATIC`  and set it to 1. When you have  staticfiles to push then remove this variable
 3. Set `DEBUG = 'DEVELOPMENT' in os.environ`
     
 Commit and push these changes to GitHub
