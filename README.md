@@ -1,13 +1,66 @@
 # Health Compass
 
-![Responsive screenshot](readme-images/multi-screens.png)
-
 ## A Nutrion and Lifestyle Coaching Site
->A site to purchase nutrition and coaching programmes, as well as blog content and testimonials to share help and advice.
+>A site to purchase nutrition and coaching programmes. As well as blog content and testimonials to share help and advice.
+
+![Responsive screenshot](readme-images/multi-screens.png)
 
 ## [Live site](https://health-compass.herokuapp.com/) | [Repository](https://github.com/MichelleCorrigan/health-compass)
 
 ---
+
+## Contents
+* [Design](#design)
+  * [Wireframes](#wireframes)
+  * [Images](#images)
+* [Technologies Used](#technologies-used)
+* [Deployment](#deployment)
+* [Testing](#testing)
+* [Bugs](#bugs)
+* [Credits](#credits)
+* [Features to implement in the future](#features-to-implement-in-the-future)
+---
+
+## Design
+
+### Wireframes
+
+<details>
+
+ <summary>Home Page</summary>
+
+ ![Home Page](readme-images/wireframe-home.png)
+
+</details>
+
+### Images
+
+A background image of various fruit and vegetables scattered on a yellow background, rendered to 50% transparency, was used across the site.
+
+<details>
+ <summary>Background Image</summary>
+
+![Background Image](readme-images/background.5_image.webp)
+
+</details>
+
+---
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Python
+- Django
+
+- ElephantSQL
+- Heroku
+- Git
+- Github
+
+---
+
 ## Deployment
 
 ### Create an external database
@@ -74,8 +127,42 @@ Click on open app at the top of the page to view your deployed app
 
 ---
 
+## Testing
+
+- Testing will be completed on the finished site.
+
+---
 
 ## Bugs
-- My Account dropdown menu doesn't function.
-- Once deployed, links to the Programmes page and Programme details page became tempermental. 
-- These will be fixed before resubmission.
+
+- Once deployed, the link to the Programmes page was missing content. After receiving help on Slack, I realised there was no data in the admin panel of production. Once the data was added the page functioned as expected.
+- The buttons on the Programmes_details page that were working to begin with, stopped functioning. After multiple troubleshooting attempts, I got help from tutor support, who found that the issue was with the body-height set in css. After deleting this, the buttons are functioning again.
+
+---
+
+## Credits
+
+- Code Institute student template: [gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
+- Code Institutes syllabus
+- ChatGPT, for paragraph about nutrition on About page
+- Pexels for background image [background image](https://res.cloudinary.com/dqouzgyjm/image/upload/v1680110719/pexels-jj-jordan-7865977_cvtugr.jpg)
+
+- References used:
+
+  - Stack Overflow
+  - Slack
+  - Bootstrap
+  - Django Docs
+  - Cripsy Forms Docs
+
+---
+
+## Features to implement in the future
+
+- Implement Stripe
+- Personalized User Profile
+- Newsletter Signup Form
+- Testimonials page
+- Blog App and page
+- Contact page
+- Employ SEO techniques
