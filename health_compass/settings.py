@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'programmes',
     'bag',
     'checkout',
+    'profiles',
 
     # Other
     'storages',
