@@ -23,6 +23,12 @@
                         {% else %}
                             <small class="text-muted">No Rating Yet</small>
                         {% endif %}
+                        {% if request.user.is_superuser %}
+                            <p small class="mt-2">
+                                <a href="{% url 'edit_programme' programme.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_programme' programme.id %}">Delete</a>
+                            </p>
+                        {% endif %}
                         <form class="form" action="{% url 'add_to_bag' programme.id %}" method="POST">
                             {% csrf_token %}
                             <div class="form-row">

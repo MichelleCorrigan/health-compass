@@ -27,6 +27,12 @@
                         <p class="card-subtitle">€{{ programme.price }}</p>
                         <a href="{% url 'programme_detail' programme.id %}" class="card-link">More info</a>
                     </div>
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_programme' programme.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_programme' programme.id %}">Delete</a>
+                        </small>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
