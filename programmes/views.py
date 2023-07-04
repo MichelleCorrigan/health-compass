@@ -41,10 +41,34 @@ def add_programme(request):
             messages.error(request, 'Failed to add programme/service. Please ensure the form is valid.')
     else:
         form = ProgrammeForm()
-        
+
     template = 'programmes/add_programme.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_programme(request, programme_id):
+    """ Edit a programme on the site """
+    programme = get_object_or_404(Programme, pk=programme_id)
+    if request.method == 'POST':
+        form = ProgrammeForm(request.POST, request.FILES, instance=programme)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated programme!')
+            return redirect(reverse('programme_detail', args=[programme.id]))
+        else:
+            messages.error(request, 'Failed to update programme. Please ensure the form is valid.')
+    else:
+        form = ProgrammeForm(instance=programme)
+        messages.info(request, f'You are editing {programme.name}')
+
+    template = 'programmes/edit_programme.html'
+    context = {
+        'form': form,
+        'programme': programme,
     }
 
     return render(request, template, context)
