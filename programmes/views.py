@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Programme
 from .forms import ProgrammeForm
@@ -29,8 +30,13 @@ def programme_detail(request, programme_id):
     return render(request, 'programmes/programme_detail.html', context)
 
 
+@login_required
 def add_programme(request):
     """ Add a programme to the site """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site administrators can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProgrammeForm(request.POST, request.FILES)
         if form.is_valid():
@@ -50,8 +56,13 @@ def add_programme(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_programme(request, programme_id):
     """ Edit a programme on the site """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site administrators can do that.')
+        return redirect(reverse('home'))
+
     programme = get_object_or_404(Programme, pk=programme_id)
     if request.method == 'POST':
         form = ProgrammeForm(request.POST, request.FILES, instance=programme)
@@ -74,8 +85,13 @@ def edit_programme(request, programme_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_programme(request, programme_id):
     """ Delete a programme from the site """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site administrators can do that.')
+        return redirect(reverse('home'))
+
     programme = get_object_or_404(Programme, pk=programme_id)
     programme.delete()
     messages.success(request, 'Programme deleted!')
