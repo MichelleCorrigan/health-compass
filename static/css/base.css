@@ -9,7 +9,7 @@ body {
     font-family: 'Lato';
 }
 
-p {
+p, li {
     color: black
 }
 
