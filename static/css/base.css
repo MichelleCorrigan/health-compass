@@ -71,6 +71,7 @@ p, li {
 }
 
 .overlay {
+    opacity: 50%;
     height: 100%;
     width: 90%;
     top: 20%;
