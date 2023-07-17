@@ -2,7 +2,7 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+    <head>
 
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,7 +17,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="icon" type="image/png" href="{% static 'img/favicon.jpg' %}"> 
+        <link rel="icon" type="image/png" href="{% static 'img/favicon.jpg' %}">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block extra_css %}
@@ -116,60 +117,45 @@
             </div>
         {% endif %}
 
-        {% block page_header %}
-        {% endblock %}
 
-        {% block content %}
-        {% endblock %}
+    {% block page_header %}
+    {% endblock %}
 
-        {% block postloadjs %}
+    {% block content %}
+    {% endblock %}
+
+   
+
+    {% block postloadjs %}
         <script type="text/javascript">
             $('.toast').toast('show');
         </script>
-        {% endblock %}
 
-        <!-- <footer class="container-fluid fixed-bottom">
-            <div class="row bg-white pt-lg-2 d-none d-lg-flex">
-                <span class="h-100">
-                    <a href="https://www.facebook.com/healthcompassnutrition" target="_blank" rel="noopener"
-                        aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook fa-lg"></i>
-                    </a>
-                </span>
-            </div>
-        </footer> -->
-        <!-- Footer -->
+        <!--- Mailchimp scripts -->
+        <script type="text/javascript" 
+            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">
+        </script>
+        <script type="text/javascript">
+            (function($) {
+                window.fnames = new Array(); 
+                window.ftypes = new Array();
+                fnames[0]=EMAIL;
+                ftypes[0]=merge;
+                fnames[1]=FNAME;
+                ftypes[1]=merge;
+                fnames[2]=LNAME;
+                ftypes[2]=merge;
+                fnames[3]=ADDRESS;
+                ftypes[3]=merge;
+                fnames[4]=PHONE;
+                ftypes[4]=merge;
+                fnames[5]=BIRTHDAY;
+                ftypes[5]=merge;false
+            }(jQuery));
+            var $mcj = jQuery.noConflict(true);
+        </script>
 
-    <footer class="container-wrapper">
-        <div class="container quotes-container content-container">
-            <section class="footer">
-            <!-- <div class="row">
-            <div class="col-12 page-header mb-2">
-                <h5 class="text-uppercase">Stay in touch:</h5> -->
-                <hr class="block-divider block-divider--short">
-            <!-- </div> -->
-        <!-- </div> -->
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <small>
-                            <h6>Social</h6>
-                    <!-- <p>Keep up to date with all our latest offers</p> -->
-                            <a href="https://www.facebook.com/healthcompassnutrition" target="_blank" rel="noopener"
-                                aria-label="Visit our Facebook page (opens in a new tab)" class="text-black">
-                                <i class="fab fa-facebook-square text-primary"></i> Follow us on Facebook!
-                            </a>
-                        </small>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <small>
-                            <h6>Subscribe!</h6>
-                            <p>Get exclusive offers and discount codes by subscribing to our monthly newsletter</p>
-                            <!-- Mailchimp signup form here -->
-                        </small>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </footer>
-    <!-- /.footer -->
+    {% endblock %}
+
     </body>
 </html>

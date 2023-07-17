@@ -163,6 +163,17 @@ p, li {
     overflow-y: auto;
 }
 
+/* Mailchimp */
+#mc_embed_signup {
+    padding: 0;
+    background: none;
+}
+
+#mc-embedded-subscribe.button {
+    background: black;
+    color: white;
+}
+
 
 /* -------------------------------- Media Queries */
 
