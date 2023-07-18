@@ -14,11 +14,14 @@
 <div class="container-sm h-100">
     <div class="row justify-content-center h-100">
         <div class="col-8 my-auto">
-            <h3 class="text-center">Testimonials</h3><br>
+            <h3 class="text-center">Testimonials from our clients</h3>
             <hr>
-            <p>
-                
-            </p>
+            {% for testimonial in testimonials %}
+                <p>{{ testimonial.review }}</p>
+                <span> -{{ testimonial.name }}</span>
+                <small> | {{ testimonial.date }}</small>
+                <hr>
+            {% endfor %}
         </div>
     </div>
 </div>
