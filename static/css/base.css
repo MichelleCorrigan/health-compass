@@ -71,13 +71,13 @@ p, li {
 }
 
 .overlay {
-    opacity: 50%;
     height: 100%;
     width: 90%;
     top: 20%;
     left: 5%;
     position: fixed;
     background: white;
+    opacity: 50%;
     z-index: -1;
 }
 
@@ -260,13 +260,13 @@ p, li {
 
     /* full overlay on mobile view */
     .overlay {
-        opacity: 50%;
         height: 100%;
         width: 100%;
         top: 0;
         left: 0;
         position: fixed;
         background: white;
+        opacity: 50% !important;
         z-index: -1;
     }
 
