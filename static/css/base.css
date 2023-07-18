@@ -260,6 +260,7 @@ p, li {
 
     /* full overlay on mobile view */
     .overlay {
+        opacity: 50%;
         height: 100%;
         width: 100%;
         top: 0;
