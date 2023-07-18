@@ -20,6 +20,12 @@
                 <p>{{ testimonial.review }}</p>
                 <span> -{{ testimonial.name }}</span>
                 <small> | {{ testimonial.date }}</small>
+                {% if request.user.is_superuser %}
+                    <p small class="mt-2">
+                        <a href="">Edit</a> | 
+                        <a class="text-danger" href="{% url 'delete_testimonial' testimonial.id %}">Delete</a>
+                    </p>
+                {% endif %}
                 <hr>
             {% endfor %}
         </div>
