@@ -17,8 +17,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="icon" type="image/png" href="{% static 'img/favicon.jpg' %}">
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/png">
+        <!-- Mailchimp -->
+        <link rel="stylesheet" href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" type="text/css">
     {% endblock %}
 
     {% block extra_css %}
@@ -43,11 +44,11 @@
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="logo-font text-green my-0"><strong>Health Compass</strong></h2>
+                        <h2 class="logo-font text-green my-0">Health Compass</h2>
                     </a>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <h4 class="logo-font-sm font-italic">Nutritional Guidance and Coaching</h4>
+                    <h3 class="logo-font-sm font-italic">Nutrition Consultants</h3>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">

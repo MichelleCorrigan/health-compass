@@ -166,11 +166,10 @@ p, li {
 /* Mailchimp */
 #mc_embed_signup {
     padding: 0;
-    background: none;
 }
 
-#mc-embedded-subscribe.button {
-    background: black;
+#mc-embedded-subscribe {
+    background: black !important;
     color: white;
 }
 
