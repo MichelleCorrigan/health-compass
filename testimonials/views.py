@@ -3,8 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import Testimonial
-
-# Create your views here.
+from .forms import TestimonialForm
 
 
 def testimonials(request):
@@ -17,6 +16,18 @@ def testimonials(request):
     }
 
     return render(request, 'testimonials/testimonials.html', context)
+
+
+def add_testimonial(request):
+    """ Add a testimonial to the site """
+    form = TestimonialForm()
+    template = 'testimonials/add_testimonial.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
 
 
 @login_required
