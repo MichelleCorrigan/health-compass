@@ -28,13 +28,40 @@ def add_testimonial(request):
             messages.success(request, 'Successfully added testimonial!')
             return redirect(reverse('add_testimonial'))
         else:
-            messages.error(request, 'Failed to add testimonial. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add testimonial. \
+                Please ensure the form is valid.')
     else:
         form = TestimonialForm()
 
     template = 'testimonials/add_testimonial.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_testimonial(request, testimonial_id):
+    """ Edit a testimonial on the site """
+    testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST, request.FILES,
+                               instance=testimonial)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated testimonial!')
+            return redirect(reverse('testimonials'))
+        else:
+            messages.error(request, 'Failed to update testimonial. \
+                Please ensure the form is valid.')
+    else:
+        form = TestimonialForm(instance=testimonial)
+        messages.info(request, f"You are editing {testimonial.name}'s review")
+
+    template = 'testimonials/edit_testimonial.html'
+    context = {
+        'form': form,
+        'testimonial': testimonial,
     }
 
     return render(request, template, context)
