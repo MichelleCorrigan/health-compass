@@ -18,16 +18,26 @@ def testimonials(request):
     return render(request, 'testimonials/testimonials.html', context)
 
 
+@login_required
 def add_testimonial(request):
     """ Add a testimonial to the site """
-    form = TestimonialForm()
+    if request.method == 'POST':
+        form = TestimonialForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added testimonial!')
+            return redirect(reverse('add_testimonial'))
+        else:
+            messages.error(request, 'Failed to add testimonial. Please ensure the form is valid.')
+    else:
+        form = TestimonialForm()
+
     template = 'testimonials/add_testimonial.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
-
 
 
 @login_required
