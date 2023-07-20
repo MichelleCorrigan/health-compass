@@ -1,11 +1,11 @@
 from django import forms
-from .models import Testimonial
+from .models import Contact
 
 
-class TestimonialForm(forms.ModelForm):
+class ContactForm(forms.ModelForm):
 
     class Meta:
-        model = Testimonial
+        model = Contact
         fields = '__all__'
 
     def __init__(self, *args, **kwargs):
