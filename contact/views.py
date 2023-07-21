@@ -15,18 +15,21 @@ def contact(request):
         message = request.POST.get('message')
         if form.is_valid():
             contact = form.save()
-            messages.success(request, 'Message Sent!')
+            messages.success(request, 'Message Sent!\
+                We will respond soon.')
+
+            # send an email
+            send_mail(
+                full_name,   # subject
+                message,   # message
+                email,   # from email
+                ['lal.corrigan@gmail.com',],   # To email
+                )
+
             return redirect(reverse('contact'))
         else:
             messages.error(request, 'Failed to send message. \
                 Please ensure the form is valid.')
-
-        send_mail(
-            full_name,
-            message,
-            email,
-            ['lal.corrigan@gmail.com',],
-        )
 
         return render(request, 'contact/contact.html')
 

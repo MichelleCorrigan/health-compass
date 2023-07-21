@@ -14,8 +14,16 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
-                <hr>
                 <h2 class="text-green mb-4">Contact Us</h2>
+                <hr>
+                <p>
+                    If you have any questions about any of our services, 
+                    please use the form below to send us a message and we will get back 
+                    to you as soon as possible. <br>
+                    <small>* Please note, to book a consultation you must first purchase
+                        a programme, and we will contact you to arrange a suitable time.
+                    </small>
+                </p>
                 <hr>
             </div>
         </div>
@@ -25,15 +33,20 @@
                 <form method="POST" action="{% url 'contact' %}" class="form mb-2">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <input type="text" name="full_name" class="form-control mb-30" placeholder="Your Name">
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="email" name="email" class="form-control mb-30" placeholder=" Your Email">
-                        </div>
-                        <div class="col-12">
-                            <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+                    <div class="form-row">
+                        <div class="form-group w-100">
+                            <div class="col-lg-6 mb-3">
+                                <input type="text" name="full_name" class="form-control mb-30 text-black border-black rounded-0"
+                                    placeholder="* Your Name">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="email" name="email" class="form-control mb-30 text-black border-black rounded-0"
+                                    placeholder="* Your Email">
+                            </div>
+                            <div class="col-12 my-3">
+                                <textarea rows="5" name="message" class="form-control mb-30 text-black border-black rounded-0"
+                                    placeholder="* Your Message"></textarea>
+                            </div>
                         </div>
                     </div>
                     <div class="text-right">
