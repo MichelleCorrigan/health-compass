@@ -1,9 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from .models import NewsletterUser
 from .forms import NewsletterUserSignUpForm
 
 # Create your views here.
+
+
+def newsletters(request):
+    """ A view to return the newsletter page """
+
+    newsletters = NewsletterUser.objects.all()
+
+    context = {
+        'newsletters': newsletters,
+    }
+
+    return render(request, 'newsletters/newsletters.html', context)
 
 
 def newsletter_signup(request):
@@ -16,6 +28,7 @@ def newsletter_signup(request):
         else:
             instance.save()
             messages.success(request, 'Thanks for signing up!')
+            return redirect(reverse('newsletters'))
 
     context = {
         'form': form,

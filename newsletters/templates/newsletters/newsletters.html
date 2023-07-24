@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-sm h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-8 my-auto">
+            <h3 class="text-center">Newsletter</h3>
+            <hr>
+            <p>
+                Every month we send out a newsletter containing
+                content we think our subscribers would benefit from;
+                <ul>
+                    <li>Up-to-date research</li>
+                    <li>Stress-relieving tips</li>
+                    <li>Nutritious snack ideas</li>
+                    <li>Family-friendly healthy recipes</li>
+                    <li>and much more...</li>
+                </ul>
+            </p>
+            <p>
+                If you would like to receive this newsletter straight
+                to your inbox, please click the link below:
+            </p>
+            <a class="nav-link" href="{% url 'newsletter_signup' %}">Sign up form</a>
+            <hr>
+            <p>
+                If you are already singed up to our newsletter and would now like to 
+                unsubscribe, please clink the link below:
+            </p>
+            <a class="nav-item" href="{% url 'newsletter_unsubscribe' %}">Unsubscribe</a>
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}

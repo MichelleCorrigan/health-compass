@@ -14,9 +14,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
-                <h2 class="text-green mb-4">Sign Up to our Newsletter</h2>
+                <h3 class="text-green mb-4">Sign Up to our Newsletter</h3>
                 <hr>
-                
             </div>
         </div>
 
@@ -25,22 +24,11 @@
                 <form method="POST" action="{% url 'newsletters' %}" class="form mb-2">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <div class="form-row">
-                        <div class="form-group w-100">
-                            
-                            <div class="col-lg-6">
-                                <input type="email" name="email" class="form-control mb-30 text-black border-black rounded-0"
-                                    placeholder="* Your Email">
-                            </div>
-                            
-                        </div>
-                    </div>
                     <div class="text-right">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'newsletters' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Send Message</button>
+                        <button class="btn btn-black rounded-0" type="submit">Sign up</button>
                     </div>
                 </form>
-                
             </div>            
         </div>
     </div>
