@@ -31,6 +31,14 @@ p, li {
     width: fit-content;
 }
 
+.link-success {
+    color: #28a745;
+}
+
+.link-success:hover {
+    color: #023a1e;
+}
+
 .shop-now-button {
     background: black;
     color: white;

@@ -28,7 +28,6 @@ def newsletter_signup(request):
         else:
             instance.save()
             messages.success(request, 'Thanks for signing up!')
-            return redirect(reverse('newsletters'))
 
     context = {
         'form': form,
@@ -43,7 +42,8 @@ def newsletter_unsubscribe(request):
     if form.is_valid():
         instance = form.save(commit=False)
         if NewsletterUser.objects.filter(email=instance.email).exists():
-            NewsletterUser.objects.filter(email=intance.email).delete()
+            NewsletterUser.objects.filter(email=instance.email).delete()
+            messages.success(request, 'You have been unsubscribed.')
         else:
             messages.error(request, 'Sorry but we did not find your \
                 email address')
