@@ -8,3 +8,6 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.message
+
+    class Meta:
+        verbose_name = 'Message'
