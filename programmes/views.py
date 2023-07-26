@@ -44,7 +44,8 @@ def add_programme(request):
             messages.success(request, 'Successfully added programme/service!')
             return redirect(reverse('programme_detail', args=[programme.id]))
         else:
-            messages.error(request, 'Failed to add programme/service. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add programme/service. Please \
+                ensure the form is valid.')
     else:
         form = ProgrammeForm()
 
@@ -71,7 +72,8 @@ def edit_programme(request, programme_id):
             messages.success(request, 'Successfully updated programme!')
             return redirect(reverse('programme_detail', args=[programme.id]))
         else:
-            messages.error(request, 'Failed to update programme. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update programme. Please \
+                ensure the form is valid.')
     else:
         form = ProgrammeForm(instance=programme)
         messages.info(request, f'You are editing {programme.name}')
