@@ -1,4 +1,6 @@
 User-agent: *
 Disallow: /accounts/
+Disallow: /admin/
 Disallow: /bag/
+Disallow: /checkout/
 Sitemap: https://health-compass.herokuapp.com/sitemap.xml
