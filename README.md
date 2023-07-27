@@ -1,7 +1,7 @@
 # Health Compass
 
-## A Nutrion and Lifestyle Coaching Site
->A site to purchase nutrition and coaching programmes. As well as blog content and testimonials to share help and advice.
+## A Nutrion and Lifestyle Consultation Site
+>A site to purchase nutrition and lifestyle coaching programmes from experienced and qualified nutritionists.
 
 ![Responsive screenshot](readme-images/multi-screens.png)
 
@@ -144,11 +144,13 @@ Click on open app at the top of the page to view your deployed app
 
 - Code Institute student template: [gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
 - Code Institutes syllabus
-- ChatGPT, for paragraph about nutrition on About page
+- ChatGPT; for content on the Home and Testimonials pages
 - Pexels for background image [background image](https://res.cloudinary.com/dqouzgyjm/image/upload/v1680110719/pexels-jj-jordan-7865977_cvtugr.jpg)
 
 - References used:
 
+  - Codemy.com django videos on YouTube
+  - Master Code Online newsletter videos on YouTube
   - Stack Overflow
   - Slack
   - Bootstrap
@@ -159,10 +161,4 @@ Click on open app at the top of the page to view your deployed app
 
 ## Features to implement in the future
 
-- Implement Stripe
-- Personalized User Profile
-- Newsletter Signup Form
-- Testimonials page
-- Blog App and page
-- Contact page
-- Employ SEO techniques
+
