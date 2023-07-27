@@ -129,7 +129,73 @@ Click on open app at the top of the page to view your deployed app
 
 ## Testing
 
-- Testing will be completed on the finished site.
+### Common Elements Testing
+Manual testing was conducted on the following elements:
+
+- Test that Logo redirects to home screen.
+- Test that Nav Links work.
+- Test that External Links work and open in a new page.
+- User registration, login and logout all work.
+- CRUD functionality only available when Superuser logged in.
+- Invalid forms give error message explaining why it is invalid.
+- Valid forms submitted have a success message relayed to user.
+
+
+### Validation
+#### HTML and CSS were validated using the [W3C Validator](https://validator.w3.org/)
+  - HTML - all clear
+    <details>
+
+      <summary>HTML validation</summary>
+
+      ![HTML validation](readme-images/HC-html-validation.png)
+ 
+    </details>
+
+  - CSS - all clear
+    <details>
+
+      <summary>CSS validation</summary>
+
+      ![CSS validation](readme-images/HC-CSS-validation.png)
+    
+    </details>
+
+#### JavaScript code was tested on [Jshint](https://jshint.com/)
+  - JS - no errors
+
+    <details>
+
+      <summary>JavaScript validation</summary>
+
+      ![JavaScript validation](readme-images/HC-js-validation.png)
+      
+    </details>
+
+##### Python was validated using the flake8 linter in the terminal
+
+#### Lighthouse validation was run, with the following results;
+ - Showing good scores throughout the site
+
+    <details>
+
+      <summary>Lighthouse validation</summary>
+
+      ![Lighthouse validation](readme-images/HC-lighthouse-score.png)
+      
+    </details>
+  
+
+#### Browser Validation tested on;
+  - Chrome
+  - Safari
+  - Edge
+  - Firefox
+
+#### Responsiveness tested on;
+  - Laptop
+  - Iphone XS
+  - Samsung Galaxy A50
 
 ---
 
