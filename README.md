@@ -10,18 +10,49 @@
 ---
 
 ## Contents
+* [Introduction](#introdution)
+* [Business Model](#business-model)
+* [User Stories](#user-stories)
 * [Design](#design)
+  * [Colour Scheme](#colour-scheme)
   * [Wireframes](#wireframes)
   * [Images](#images)
+  * [Fonts](#fonts)
 * [Technologies Used](#technologies-used)
 * [Deployment](#deployment)
+  * [Create an external database](#create-an-external-database)
+  * [Create Heroku App](#create-heroku-app)
+  * [Forking the Repository](#forking-the-repository)
+  * [Creating a Clone](#creating-a-clone)
 * [Testing](#testing)
 * [Bugs](#bugs)
 * [Credits](#credits)
 * [Features to implement in the future](#features-to-implement-in-the-future)
 ---
 
+## Introduction
+The aim of this project is to build a Full-Stack e-commerce site based on business logic used to control a centrally-owned dataset. I will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
+This project is a health and wellness site offering programmes for personal consultation services, aimed at those wishing to improve various aspects of their health, including weight-loss/gain, better sleep and stress management.
+
+## Business Model
+Health Compass is a Business-to-Customer ( B2C ) e-commerce consultation site. As the majority of it's user's would be coming from online search engines, strongly implemented SEO is of high importance. Therefore it was important to include the following:
+- a robots.txt file
+- a sitemap.xml file
+- rel attributes on links to external sites
+- descriptive meta tags with short and long tail keywords
+
+  - Adding a Newsletter subscription form, Testimonials, secure payments with Stripe, a Privacy Policy and an easy way to get in Contact increase customer trust and satisfaction, hopefully leading to customer referrals.
+  - Creating a Facebook Business page is an easy way for friends, family and satisfied customers to share/like the page increasing Brand Reach. Regular content, as well as advertising special offers/discounts can entice potential customers.
+
+## User Stories
+- User stories have been mapped using a Github project board and can be viewed here:
+[Project Board for Health Compass](https://github.com/users/MichelleCorrigan/projects/3)
+
 ## Design
+The site has a simple and clear design, making it easy and enjoyable to navigate through.
+
+### Colour Scheme
+The predominant background of a warm yellow was chosen to convey sunshine and warmth, the splashes of green in the background and the green logo-text convey life and health. The overlay and black-text establish a contrast to enhance user accessibility.
 
 ### Wireframes
 
@@ -44,6 +75,9 @@ A background image of various fruit and vegetables scattered on a yellow backgro
 
 </details>
 
+### Fonts
+The main font used is Lato and Sans Serif as the backup font if the imported font doesn't load. Fonts were imported from [Google Fonts](https://fonts.google.com/)
+
 ---
 
 ## Technologies Used
@@ -53,11 +87,14 @@ A background image of various fruit and vegetables scattered on a yellow backgro
 - JavaScript
 - Python
 - Django
+- Bootstrap
+- Crispy forms
 
 - ElephantSQL
 - Heroku
 - Git
 - Github
+- AWS storage
 
 ---
 
@@ -125,6 +162,39 @@ In the settings tab, update the config vars with the following:
 
 Click on open app at the top of the page to view your deployed app
 
+### Forking the Repository
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
+2. Locate the [GitHub Repository](https://github.com/MichelleCorrigan/health-compass).
+3. At the top of the repository, on the right side of the page, select "Fork"
+4. You should now have a copy of the original repository in your GitHub account.
+
+### Creating a Clone
+How to run this project locally:
+1. Install the [GitPod Browser](https://www.gitpod.io/docs/browser-extension/) Extension for Chrome.
+2. After installation, restart the browser.
+3. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
+4. Locate the [GitHub Repository](https://github.com/MichelleCorrigan/health-compass).
+5. Click the green "GitPod" button in the top right corner of the repository.
+This will trigger a new gitPod workspace to be created from the code in github where you can work locally.
+
+How to run this project within a local IDE, such as VSCode:
+
+1. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
+2. Locate the [GitHub Repository](https://github.com/MichelleCorrigan/health-compass).
+3. Under the repository name, click "Clone or download".
+4. In the Clone with HTTPs section, copy the clone URL for the repository.
+5. In your local IDE open the terminal.
+6. Change the current working directory to the location where you want the cloned directory to be made.
+7. Type 'git clone', and then paste the URL you copied in Step 3.
+```
+git clone https://github.com/USERNAME/REPOSITORY
+```
+8. Press Enter. Your local clone will be created.
+
+Further reading and troubleshooting on cloning a repository from GitHub [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
 ---
 
 ## Testing
@@ -142,6 +212,7 @@ Manual testing was conducted on the following elements:
 
 
 ### Validation
+
 #### HTML and CSS were validated using the [W3C Validator](https://validator.w3.org/)
   - HTML - all clear
     <details>
@@ -210,6 +281,7 @@ Manual testing was conducted on the following elements:
 
 - Code Institute student template: [gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template)
 - Code Institutes syllabus
+- Previous personally completed projects within Code Institute
 - ChatGPT; for content on the Home and Testimonials pages
 - Pexels for background image [background image](https://res.cloudinary.com/dqouzgyjm/image/upload/v1680110719/pexels-jj-jordan-7865977_cvtugr.jpg)
 
@@ -226,5 +298,7 @@ Manual testing was conducted on the following elements:
 ---
 
 ## Features to implement in the future
+- About Us page
+  - I think adding an About Us page featuring the consultants within Health Compass; their qualifications, specialisations, background and profile picture, would help user's feel more at ease about getting in contact, and ultimately more likely to purchase programmes/services.
 
 
